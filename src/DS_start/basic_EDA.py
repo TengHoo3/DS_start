@@ -3,16 +3,16 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from statistics import mean
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import MinMaxScaler, StandardScaler
-from sklearn.decomposition import PCA
-from lightgbm import LGBMClassifier
-from catboost import CatBoostClassifier
-from xgboost import XGBClassifier
-from sklearn.ensemble import VotingClassifier
-from sklearn.model_selection import GridSearchCV
-from sklearn.preprocessing import LabelEncoder, OrdinalEncoder
+# from statistics import mean
+# from sklearn.impute import SimpleImputer
+# from sklearn.preprocessing import MinMaxScaler, StandardScaler
+# from sklearn.decomposition import PCA
+# from lightgbm import LGBMClassifier
+# from catboost import CatBoostClassifier
+# from xgboost import XGBClassifier
+# from sklearn.ensemble import VotingClassifier
+# from sklearn.model_selection import GridSearchCV
+# from sklearn.preprocessing import LabelEncoder, OrdinalEncoder
 from math import ceil
 
 def univar_analysis(df):

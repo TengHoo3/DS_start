@@ -27,10 +27,13 @@ setuptools.setup(
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.7",
     install_requires = [
+        "scipy",
         "numpy",
-        "tqdm",
-        "matplotlib",
         "pandas",
-        "joblib"
+        "matplotlib",
+        "seaborn",
+        'sklearn',
+        'math'
         ]
     )
+
