@@ -33,7 +33,6 @@ setuptools.setup(
         "matplotlib",
         "seaborn",
         'sklearn',
-        'math'
         ]
     )
 
