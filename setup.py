@@ -8,7 +8,7 @@ USER_NAME = 'TengHoo3'
 
 setuptools.setup(
     name=f"DS-basic-start",
-    version="0.0.1",
+    version="0.0.2",
     author=USER_NAME,
     author_email="tenghoo3@gmail.com",
     description="Start your DS projects with some basic analysis using this package",
