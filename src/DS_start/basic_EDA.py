@@ -13,7 +13,7 @@ import seaborn as sns
 # from sklearn.ensemble import VotingClassifier
 # from sklearn.model_selection import GridSearchCV
 # from sklearn.preprocessing import LabelEncoder, OrdinalEncoder
-from math import ceil
+import math
 
 def univar_analysis(df):
     for i in df:
@@ -43,10 +43,10 @@ def dichotomous_categorical_visual(df,target):
         print("Your target variable is not dichotomous!")
 
 def categorical_visual(x,y,kind,data):
-    sns.catplot(x=x, y=y, kind=kind, data=tips)
+    sns.catplot(x=x, y=y, kind=kind, data=data)
 
 def categorical_multivariate_visual(x,y,hue,kind,data):
-    sns.catplot(x=x, y=y, hue=hue, kind=kind, data=tips)
+    sns.catplot(x=x, y=y, hue=hue, kind=kind, data=data)
 
 def continuous_visual(df,target):
     rows = math.ceil(len(train.select_dtypes('float').columns-1)/2)
@@ -59,6 +59,7 @@ def continuous_visual(df,target):
         plt.imshow(df_float[i])
         plt.show()
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def chi2_test():
     pass
