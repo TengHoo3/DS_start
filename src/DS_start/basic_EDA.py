@@ -45,18 +45,18 @@ def dichotomous_categorical_visual(df, target):
 
 
 def categorical_visual(x, y, kind, data):
-    sns.catplot(x, y, hue, kind, data)
+    sns.catplot(x=x, y=y, data=data, kind=kind)
 
 
 def categorical_multivariate_visual(x, y, hue, kind, data):
-    sns.catplot(x, y, hue, kind, data)
+    sns.catplot(x=x, y=y, hue=hue, kind=kind, data=data)
 
 
 def continuous_visual(df, target):
     rows = np.ceil(len(train.select_dtypes('float').columns-1)/2)
     cols = 2
     # fig, axes = plt.subplots(rows,cols,figsize=(16,6))
-    df_float = train.select_dtypes('float')
+    df_float = df.select_dtypes('float')
     for i in df_float:
         # axes[0] =
         plt.subplot(rows, cols, i+1)
