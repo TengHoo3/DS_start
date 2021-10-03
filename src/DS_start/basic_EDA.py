@@ -44,16 +44,16 @@ def dichotomous_categorical_visual(df, target):
         print("Your target variable is not dichotomous!")
 
 
-def categorical_visual(x, y, kind, data):
-    sns.catplot(x=x, y=y, data=data, kind=kind)
+def categorical_visual(x, y, data, kind, hue=None):
+    sns.catplot(x, y, hue, data, kind=kind)
 
 
-def categorical_multivariate_visual(x, y, hue, kind, data):
-    sns.catplot(x=x, y=y, hue=hue, kind=kind, data=data)
+def categorical_multivariate_visual(x, y, hue, data, kind):
+    sns.catplot(x, y, hue, data, kind=kind)
 
 
 def continuous_visual(df, target):
-    rows = np.ceil(len(train.select_dtypes('float').columns-1)/2)
+    rows = np.ceil(len(df.select_dtypes('float').columns-1)/2)
     cols = 2
     # fig, axes = plt.subplots(rows,cols,figsize=(16,6))
     df_float = df.select_dtypes('float')
