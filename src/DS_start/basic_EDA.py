@@ -53,14 +53,13 @@ def categorical_multivariate_visual(x, y, hue, data, kind):
 
 
 def continuous_visual(df, target):
-    rows = np.ceil(len(df.select_dtypes('float').columns-1)/2)
-    cols = 2
-    # fig, axes = plt.subplots(rows,cols,figsize=(16,6))
-    df_float = df.select_dtypes('float')
-    for i in df_float:
-        # axes[0] =
-        plt.subplot(rows, cols, i+1)
-        plt.imshow(df_float[i])
+    sns.set(rc={'figure.figsize': (16, 10)})
+    # rows = np.ceil((len(df.select_dtypes(include=['float','int']).columns)+1)/2)
+    # cols = 2
+    df_float = df.select_dtypes(['float', 'int'])
+    for i, n in enumerate(df_float):
+        # plt.subplot(rows, cols, i+1)
+        sns.boxplot(y=target, x=df[n], data=df)
         plt.show()
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
