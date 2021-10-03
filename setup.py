@@ -8,7 +8,7 @@ USER_NAME = 'TengHoo3'
 
 setuptools.setup(
     name=f"DS-basic-start",
-    version="0.0.3",
+    version="0.0.4",
     author=USER_NAME,
     author_email="tenghoo3@gmail.com",
     description="Start your DS projects with some basic analysis using this package",
@@ -26,13 +26,12 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.7",
-    install_requires = [
+    install_requires=[
         "scipy",
         "numpy",
         "pandas",
         "matplotlib",
         "seaborn",
         'sklearn',
-        ]
-    )
-
+    ]
+)
