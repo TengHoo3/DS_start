@@ -51,6 +51,7 @@ def categorical_visual(x, y, data, kind, hue=None):
 def categorical_multivariate_visual(x, y, hue, data, kind):
     sns.catplot(x, y, hue, data, kind=kind)
 
+
 def continuous_visual(df, target):
     sns.set(rc={'figure.figsize': (16, 10)})
     df_float = df.select_dtypes(['float', 'int'])
@@ -59,6 +60,7 @@ def continuous_visual(df, target):
         plt.show()
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 def chi2_test(df_cat, target_name):
     chi2_summary = []
@@ -72,7 +74,9 @@ def chi2_test(df_cat, target_name):
         score_to_add['dof'] = dof
         chi2_summary.append(score_to_add)
     df_chi2 = pd.DataFrame(chi2_summary)
-    df_chi2
+
+    return df_chi2
+
 
 def pbs_test(df_num, target_name):
     num_summary = []
@@ -91,7 +95,7 @@ def pbs_test(df_num, target_name):
 def pearson_test(df_num, target_name):
     num_summary = []
     for i in df_num:
-        pbs = perasonr(df_num[i], df_num[target_name])
+        pbs = pearsonr(df_num[i], df_num[target_name])
         score_to_add = {}
         score_to_add['var'] = i
         score_to_add['pearson corr'] = pbs[0]
